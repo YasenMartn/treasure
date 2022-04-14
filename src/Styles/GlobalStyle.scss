@@ -1,8 +1,12 @@
+@import "./utilities";
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
+
 /* width */
 ::-webkit-scrollbar{
     width: 10px;
@@ -18,20 +22,4 @@
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover{
     background: #555; 
-}
-
-/* some nice colors */
-:root{
-    --blue: #0d6efd;
-    --indigo: #6610f2;
-    --purple: #6f42c1;
-    --green: #20c997;
-    --pink: #d63384;
-    --light-blue: #0dcaf0;
-    --orange: #fd7e14;
-    --yellow: #ffc107;
-    --main: #02162e;
-    --dark-theme: #121212;
-    --color: #313131;
-    --red: #dc3545;
 }
