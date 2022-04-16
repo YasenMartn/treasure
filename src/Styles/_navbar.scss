@@ -1,0 +1,147 @@
+.navbar{
+    width: 100%;
+    height: 70px;
+    background-color: $blue;
+    z-index: 2222;
+    position: sticky;
+    top: 0;
+    @include flexCenter();
+    .navbarPart{
+        flex: 1;
+        height: 100%;
+        @include flexCenter();
+    }
+    .navLeft{
+        @include flexStart();
+        padding-left: 20px;
+        img{
+            width: 130px;
+            cursor: pointer;
+        }
+    }
+    .navMid{
+        flex: 2;        
+        a{
+            text-decoration: none;
+            color: white;
+            margin-right: 20px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            &:last-child{
+                margin-right: 0;
+            }
+            &:hover{
+                color: black;
+            }
+            &.active{
+                color: black;
+            }
+        }
+    }
+    .navRight{
+        @include flexEnd();
+        padding-right: 20px;
+    }
+    .mobileMenuBtn{
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        left: 20px;
+        cursor: pointer;
+        display: none;
+        .line{
+            width: 100%;
+            height: 5px;
+            position: relative;
+            transition: .5s ease-in-out all;
+            background-color: white;
+            @include transition();
+            &::after, &::before{
+                content: "";
+                position: absolute;
+                transition: .5s ease-in-out all;
+                width: 100%;
+                height: 100%;
+                background-color: white; 
+                @include transition();
+            }
+            &::after{
+                top: 15px;
+            }
+            &::before{
+                bottom: 15px;
+            }
+            &.active{
+                background-color: transparent;
+            }
+            &.active::before{
+                bottom: 0;
+                transform: rotate(45deg);
+            }
+            &.active::after{
+                top: 0;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+    .mobileMenu{
+        width: 90%;
+        height: calc(100vh - 70px);
+        position: absolute;
+        top: 70px;
+        left: 0px;
+        background-color: $green;
+        z-index: 2222;
+        @include transition();
+        display: none;
+        transform: translate(-100%);
+        &.active{
+            transform: translate(0%); 
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            margin-bottom: 20px;
+            font-weight: bold;
+            font-size: 2rem;
+            &:last-child{
+                margin-bottom: 0;
+            }
+            &:hover{
+                color: black;
+            }
+            &.active{
+                color: black;
+            }
+        }
+    }
+}
+
+.cartIcon{
+    color: white;
+    cursor: pointer;
+}
+
+
+@media (max-width: 800px) {
+    .navbar{
+        .navMid{
+            display: none;
+        }
+        .navLeft{
+            display: none;
+        }
+        .mobileMenuBtn{
+            @include flexCenter();
+        }
+        .mobileMenu{
+            @include flexColumn();
+        }
+        .navRight{
+            width: fit-content;
+            position: absolute;
+            right: 0px;
+            flex: auto;
+        }
+    }
+}

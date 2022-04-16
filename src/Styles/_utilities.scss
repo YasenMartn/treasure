@@ -10,6 +10,7 @@ $main: #02162e;
 $dark-theme: #121212;
 $color: #313131;
 $red: #dc3545;
+$grey: #313131;
 
 @mixin flexCenter{
     display: flex;
@@ -31,4 +32,8 @@ $red: #dc3545;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+}
+
+@mixin transition {
+    transition: .5s ease-in-out all ;
 }

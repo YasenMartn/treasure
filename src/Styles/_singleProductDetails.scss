@@ -1,0 +1,82 @@
+.singleProductDetails{
+    width: 100%;
+    min-height: calc(100vh - 70px);
+    background-color: pink;
+    @include flexCenter();
+    .singleProductDetailsLeft{
+        width: 50%;
+        height: 100%;
+        @include flexCenter();
+        .singleProductImageContainer{
+            width: 400px;
+            height: 400px;
+            background: white;
+            border-radius: 15px;
+            @include flexCenter();
+            .singleProductImage{
+                width: 80%;
+                height: 80%;
+                object-fit: contain;
+            }
+        }
+    }
+    .singleProductDetailsRight{
+        width: 50%;
+        height: 100%;
+        @include flexColumn();
+        align-items: flex-start;
+        padding: 20px;
+        .singleProductTitle{
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+        }
+        .singleProductDesc{
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            color: grey;
+        }
+        .singleProductPrice{
+            font-weight: bold;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: $grey;
+        }
+        .ButtonsContainer{
+            @include flexStart();
+            gap: 1rem;
+            flex-wrap: wrap;
+            .secondaryBtn{
+                color: $blue;
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .singleProductDetails{
+        @include flexColumn();
+        justify-content: flex-start;
+        .singleProductDetailsLeft{
+            width: 100%;
+            padding: 20px 0;
+            .singleProductImageContainer{
+                width: 70%;
+                height: 200px;
+            }
+        }
+        .singleProductDetailsRight{
+            width: 100%;
+            align-items: center;
+            .singleProductTitle{
+                font-size: 2rem;
+                text-align: center;
+            }
+            .singleProductPrice{
+                font-size: 1.8rem;
+            }
+            .ButtonsContainer{
+                @include flexCenter();
+            }
+        }
+    }
+}
