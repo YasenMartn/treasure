@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Product = ({ product }) => {
 
-  const { id, title, price, description, category, image, rating } = product
+  const { id, title, price, image } = product
 
   return (
     <div className='product'>

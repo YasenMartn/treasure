@@ -6,7 +6,7 @@ import { addProduct } from '../redux/cartSlice';
 
 const SingleProductDetails = ({ product }) => {
 
-  const { id, title, price, description, category, image, rating } = product;
+  const { id, title, price, description, image } = product;
 
   const [quantity, setQuantity] = useState(1);
 
