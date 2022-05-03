@@ -1,0 +1,90 @@
+.contact{
+    width: 100%;
+    min-height: calc(100vh - 70px);
+    background: pink;
+    @include flexCenter();
+    .contactLeft{
+        width: 50%;
+        min-height: calc(100vh - 70px);
+        @include flexColumn();
+        align-items: flex-start;
+        padding: 50px;
+        .leftTitle{
+            margin-bottom: 20px;
+            color: $grey;
+            font-size: 2.5rem;
+            font-weight: bold;
+            z-index: 22;
+        }
+        .leftText{
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            color: $grey;
+            z-index: 22;
+
+        }
+        .leftSocialsContainer{
+            @include flexCenter();
+            .icon{
+                margin-right: 10px;
+                cursor: pointer;
+                color: $grey;
+                &:hover{
+                    color: black;
+                }
+                &:last-child{
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+    .contactRight{
+        width: 50%;
+        min-height: calc(100vh - 70px);
+        @include flexCenter();
+        padding: 20px;
+        form{
+            @include flexColumn();
+            align-items: flex-start;
+            width: 50%;
+            z-index: 22;
+            input{
+                margin-bottom: 20px;
+                padding: 10px; 
+                width: 100%;
+            }
+            textarea{
+                margin-bottom: 20px;
+                padding: 10px; 
+                resize: none;
+                width: 100%;
+
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .contact{
+        @include flexColumn();
+        .contactLeft{
+            width: 100%;
+            padding: 20px;
+            align-items: center;
+            min-height: auto;
+            .leftTitle{
+                font-size: 2rem;
+            }
+        }
+        .contactRight{
+            width: 100%;
+            min-height:auto;
+            form{
+                width: 90%;
+                .primaryBtn{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

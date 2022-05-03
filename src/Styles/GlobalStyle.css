@@ -62,7 +62,7 @@
   color: white;
   margin-right: 20px;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 .navbar .navMid a:last-child {
@@ -70,11 +70,11 @@
 }
 
 .navbar .navMid a:hover {
-  color: black;
+  color: pink;
 }
 
 .navbar .navMid a.active {
-  color: black;
+  color: hotpink;
 }
 
 .navbar .navRight {
@@ -150,7 +150,7 @@
   position: absolute;
   top: 70px;
   left: 0px;
-  background-color: #20c997;
+  background-color: #408cfd;
   z-index: 2222;
   -webkit-transition: .5s ease-in-out all;
   transition: .5s ease-in-out all;
@@ -167,7 +167,7 @@
 .navbar .mobileMenu a {
   text-decoration: none;
   color: white;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   font-weight: bold;
   font-size: 2rem;
 }
@@ -237,7 +237,7 @@
 .home {
   width: 100%;
   height: calc(100vh - 70px);
-  background-color: #d63384;
+  background-color: #df5d9e;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -292,7 +292,7 @@
 .products {
   width: 100%;
   min-height: calc(100vh - 70px);
-  background-color: pink;
+  background-color: #df5d9e;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -316,6 +316,7 @@
   font-weight: bold;
   margin-bottom: 20px;
   font-size: 3rem;
+  color: white;
 }
 
 .products .productsCategoryContainer {
@@ -360,6 +361,10 @@
 }
 
 @media (max-width: 800px) {
+  .products .productsTitle {
+    font-size: 2.5rem;
+    text-align: center;
+  }
   .products .productsCategoryContainer {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -430,13 +435,15 @@
 .product .productTitle {
   font-weight: bold;
   margin-bottom: 20px;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  color: #313131;
 }
 
 .product .productPrice {
   font-weight: bold;
   font-size: 1.6rem;
   margin-bottom: 20px;
+  color: #313131;
 }
 
 .loading {
@@ -735,6 +742,7 @@
 .singleProductDetails .singleProductDetailsRight .singleProductTitle {
   margin-bottom: 20px;
   font-size: 2.5rem;
+  color: #313131;
 }
 
 .singleProductDetails .singleProductDetailsRight .singleProductDesc {
@@ -874,6 +882,473 @@
   color: #313131;
 }
 
+.cart {
+  width: 100%;
+  min-height: calc(100vh - 70px);
+  background-color: pink;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.cart .cartLeft {
+  width: 70%;
+  min-height: calc(100vh - 70px);
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.cart .cartLeft .myCart {
+  margin-bottom: 20px;
+  color: #313131;
+}
+
+.cart .cartRight {
+  width: 30%;
+  min-height: calc(100vh - 70px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 20px;
+}
+
+.cart .cartRight .totalCartContainer {
+  width: 100%;
+  background: #72abfe;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 20px;
+  color: white;
+  border-radius: 15px;
+}
+
+.cart .cartRight .totalCartContainer .priceText {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.cart .cartRight .totalCartContainer .priceText:last-child {
+  margin-bottom: 0;
+}
+
+.cart .cartRight .totalCartContainer .btnsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.cart .cartRight .totalCartContainer .btnsContainer .secondaryBtn {
+  border: 1px solid #dc3545;
+  color: white;
+  background: #dc3545;
+}
+
+.cart .cartRight .totalCartContainer .btnsContainer .secondaryBtn:hover {
+  background: #bd2130;
+}
+
+@media (max-width: 800px) {
+  .cart {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .cart .cartLeft {
+    width: 100%;
+    min-height: auto;
+  }
+  .cart .cartRight {
+    width: 100%;
+    min-height: -webkit-fit-content;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+  }
+}
+
+.cartProduct {
+  width: 100%;
+  min-height: 200px;
+  border-radius: 15px;
+  background: white;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cartProduct .cartProductLeft {
+  min-height: 200px;
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cartProduct .cartProductLeft .cartProductImage {
+  width: 70%;
+  height: 70%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.cartProduct .cartProductRight {
+  width: 80%;
+  min-height: 200px;
+  background: #408cfd;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 20px 30px 0px 20px;
+}
+
+.cartProduct .cartProductRight .cartProductTitle {
+  margin-bottom: 20px;
+}
+
+.cartProduct .cartProductRight .cartProductPrice {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.cartProduct .iconContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.cartProduct .iconContainer:hover {
+  background: #dc3545;
+}
+
+@media (max-width: 800px) {
+  .cartProduct .cartProductLeft {
+    width: 30%;
+  }
+  .cartProduct .cartProductLeft .cartProductImage {
+    width: 80%;
+  }
+  .cartProduct .cartProductRight .cartProductTitle {
+    font-size: 1.2rem;
+  }
+  .cartProduct .cartProductRight .cartProductPrice {
+    font-size: 1.2rem;
+  }
+}
+
+.about {
+  width: 100%;
+  min-height: calc(100vh - 70px);
+  background-color: pink;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 20px 20%;
+}
+
+.about .title {
+  margin-bottom: 20px;
+  color: #313131;
+  z-index: 22;
+}
+
+.about .info {
+  font-size: 1.2rem;
+  line-height: 2rem;
+  z-index: 22;
+}
+
+.contact {
+  width: 100%;
+  min-height: calc(100vh - 70px);
+  background: pink;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact .contactLeft {
+  width: 50%;
+  min-height: calc(100vh - 70px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 50px;
+}
+
+.contact .contactLeft .leftTitle {
+  margin-bottom: 20px;
+  color: #313131;
+  font-size: 2.5rem;
+  font-weight: bold;
+  z-index: 22;
+}
+
+.contact .contactLeft .leftText {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  color: #313131;
+  z-index: 22;
+}
+
+.contact .contactLeft .leftSocialsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact .contactLeft .leftSocialsContainer .icon {
+  margin-right: 10px;
+  cursor: pointer;
+  color: #313131;
+}
+
+.contact .contactLeft .leftSocialsContainer .icon:hover {
+  color: black;
+}
+
+.contact .contactLeft .leftSocialsContainer .icon:last-child {
+  margin-right: 0;
+}
+
+.contact .contactRight {
+  width: 50%;
+  min-height: calc(100vh - 70px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px;
+}
+
+.contact .contactRight form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 50%;
+  z-index: 22;
+}
+
+.contact .contactRight form input {
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 100%;
+}
+
+.contact .contactRight form textarea {
+  margin-bottom: 20px;
+  padding: 10px;
+  resize: none;
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  .contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contact .contactLeft {
+    width: 100%;
+    padding: 20px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    min-height: auto;
+  }
+  .contact .contactLeft .leftTitle {
+    font-size: 2rem;
+  }
+  .contact .contactRight {
+    width: 100%;
+    min-height: auto;
+  }
+  .contact .contactRight form {
+    width: 90%;
+  }
+  .contact .contactRight form .primaryBtn {
+    width: 100%;
+  }
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -907,7 +1382,6 @@
   font-size: 1.2rem;
   border: 1px solid #0d6efd;
   color: white;
-  font-weight: bold;
   cursor: pointer;
   background-color: #0d6efd;
   border-radius: 5px;
@@ -925,7 +1399,6 @@
   font-size: 1.2rem;
   color: #0d6efd;
   border: 1px solid #0d6efd;
-  font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
   background-color: transparent;

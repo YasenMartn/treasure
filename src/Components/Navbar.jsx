@@ -1,11 +1,14 @@
-import { ShoppingCart } from '@mui/icons-material'
-import { Badge } from '@mui/material'
-import React, { useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { ShoppingCart } from '@mui/icons-material';
+import { Badge } from '@mui/material';
+import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const Navbar = () => {
 
-  const [menu, setmenu] = useState(false)
+  const [menu, setmenu] = useState(false);
+
+  const productsQuantity = useSelector(state => state.cart.productsQuantity)
 
   return (
     <div className='navbar'>
@@ -33,7 +36,7 @@ const Navbar = () => {
       </div>
 
       <NavLink to="/cart" className="navbarPart navRight">
-        <Badge badgeContent={4} color="secondary">
+        <Badge badgeContent={productsQuantity} color="secondary">
           <ShoppingCart fontSize='large' className='cartIcon' />
         </Badge>
       </NavLink>

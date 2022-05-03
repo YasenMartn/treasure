@@ -26,15 +26,15 @@
             color: white;
             margin-right: 20px;
             font-weight: bold;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             &:last-child{
                 margin-right: 0;
             }
             &:hover{
-                color: black;
+                color: pink;
             }
             &.active{
-                color: black;
+                color: hotpink;
             }
         }
     }
@@ -90,7 +90,7 @@
         position: absolute;
         top: 70px;
         left: 0px;
-        background-color: $green;
+        background-color: lighten($blue, 10%);
         z-index: 2222;
         @include transition();
         display: none;
@@ -101,7 +101,7 @@
         a{
             text-decoration: none;
             color: white;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
             font-weight: bold;
             font-size: 2rem;
             &:last-child{

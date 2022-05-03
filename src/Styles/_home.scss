@@ -1,7 +1,7 @@
 .home{
     width: 100%;
     height: calc(100vh - 70px);
-    background-color: $pink;
+    background-color: lighten($pink, 10%);
     overflow: hidden;
     @include flexColumn();
     position: relative;

@@ -1,12 +1,20 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import QuantityButton from './QuantityButton'
+import QuantityButton from './QuantityButton';
+import { useDispatch } from 'react-redux';
+import { addProduct } from '../redux/cartSlice';
 
 const SingleProductDetails = ({ product }) => {
 
   const { id, title, price, description, category, image, rating } = product;
 
-  const [quantity, setQuantity] = useState(1)
+  const [quantity, setQuantity] = useState(1);
+
+  const dispatch = useDispatch();
+
+  const addItem = () => {
+    dispatch(addProduct({id, title, price, quantity, image}))
+  }
 
   return (
     <div className='singleProductDetails'>
@@ -21,7 +29,7 @@ const SingleProductDetails = ({ product }) => {
         <span className="singleProductPrice">Price: $ {(price * quantity).toFixed(2)}</span>
         <QuantityButton quantity={quantity} setQuantity={setQuantity} />
         <div className="ButtonsContainer">
-          <button className="primaryBtn">Add to Cart</button>
+          <button className="primaryBtn" onClick={addItem} >Add to Cart</button>
           <Link to="/products" className="secondaryBtn">Continue Shopping</Link>
         </div>
 

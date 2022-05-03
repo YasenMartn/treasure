@@ -20,11 +20,13 @@
     .productTitle {
         font-weight: bold;
         margin-bottom: 20px;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
+        color: $grey;
     }
     .productPrice {
         font-weight: bold;
         font-size: 1.6rem;
         margin-bottom: 20px;
+        color: $grey;
     }
 }
