@@ -19,7 +19,7 @@ const ProductDetails = () => {
           } catch (err) {}
       }
       getSingleProduct();
-    }, [product])
+    }, [])
     
   return (
     <div className='productDetails'>
