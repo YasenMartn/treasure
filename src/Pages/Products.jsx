@@ -20,7 +20,7 @@ const Products = () => {
             } catch (err) {}
         }
         getProducts();
-    }, [])
+    }, [getProducts]) 
 
     const filterPorducts = (category) => {
         const updatedList = products.filter((x) => x.category === category ) 
