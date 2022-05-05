@@ -1,13 +1,14 @@
 .about{
     width: 100%;
     min-height: calc(100vh - 70px);
-    background-color: pink;
+    background-color: lighten($pink, 20%);
     @include flexColumn();
     justify-content: flex-start;
     padding: 20px 20%;
+    color: white;
+
     .title{
         margin-bottom: 20px;
-        color: $grey;
         z-index: 22;
     }
     .info{

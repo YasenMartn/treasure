@@ -1,7 +1,7 @@
 .contact{
     width: 100%;
     min-height: calc(100vh - 70px);
-    background: pink;
+    background-color: lighten($pink, 20%);
     @include flexCenter();
     .contactLeft{
         width: 50%;
@@ -9,9 +9,10 @@
         @include flexColumn();
         align-items: flex-start;
         padding: 50px;
+        color: white;
+
         .leftTitle{
             margin-bottom: 20px;
-            color: $grey;
             font-size: 2.5rem;
             font-weight: bold;
             z-index: 22;
@@ -19,9 +20,7 @@
         .leftText{
             margin-bottom: 20px;
             font-size: 1.2rem;
-            color: $grey;
             z-index: 22;
-
         }
         .leftSocialsContainer{
             @include flexCenter();

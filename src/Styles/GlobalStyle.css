@@ -237,7 +237,7 @@
 .home {
   width: 100%;
   height: calc(100vh - 70px);
-  background-color: #df5d9e;
+  background-color: #e788b7;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -292,7 +292,7 @@
 .products {
   width: 100%;
   min-height: calc(100vh - 70px);
-  background-color: #df5d9e;
+  background-color: #e788b7;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -309,7 +309,7 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  padding-top: 40px;
+  padding: 40px 0;
 }
 
 .products .productsTitle {
@@ -885,7 +885,7 @@
 .cart {
   width: 100%;
   min-height: calc(100vh - 70px);
-  background-color: pink;
+  background-color: #e788b7;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -924,7 +924,7 @@
 
 .cart .cartLeft .myCart {
   margin-bottom: 20px;
-  color: #313131;
+  color: white;
 }
 
 .cart .cartRight {
@@ -1151,7 +1151,7 @@
 .about {
   width: 100%;
   min-height: calc(100vh - 70px);
-  background-color: pink;
+  background-color: #e788b7;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1169,11 +1169,11 @@
       -ms-flex-pack: start;
           justify-content: flex-start;
   padding: 20px 20%;
+  color: white;
 }
 
 .about .title {
   margin-bottom: 20px;
-  color: #313131;
   z-index: 22;
 }
 
@@ -1186,7 +1186,7 @@
 .contact {
   width: 100%;
   min-height: calc(100vh - 70px);
-  background: pink;
+  background-color: #e788b7;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1218,11 +1218,11 @@
       -ms-flex-align: start;
           align-items: flex-start;
   padding: 50px;
+  color: white;
 }
 
 .contact .contactLeft .leftTitle {
   margin-bottom: 20px;
-  color: #313131;
   font-size: 2.5rem;
   font-weight: bold;
   z-index: 22;
@@ -1231,7 +1231,6 @@
 .contact .contactLeft .leftText {
   margin-bottom: 20px;
   font-size: 1.2rem;
-  color: #313131;
   z-index: 22;
 }
 
