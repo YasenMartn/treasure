@@ -2,8 +2,6 @@ import React from 'react';
 
 const Loading = ({type}) => {
 
-  const COUNTER = 20;
-
   const ProductsSkeleton = () => {
     return(
       <div className='loading'>
@@ -32,7 +30,7 @@ const Loading = ({type}) => {
     )
   }
 
-  if (type === "products") return Array(COUNTER).fill(<ProductsSkeleton />);
+  if (type === "products") return [...Array(20)].map((x, i) => <ProductsSkeleton key={i} /> ) ;
   if (type === "productDetails") return <ProductDetailsSkeleton />;
 
 }

@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import Loading from '../Components/Loading';
 import Product from '../Components/Product';
-import {v4 as uuid} from "uuid"
 
 const Products = () => {
 
@@ -38,7 +37,7 @@ const Products = () => {
             <button className="primaryBtn" onClick={()=> filterPorducts("electronics")}>Electronics</button>
         </div>
         <div className="productsContainer">
-            {loading ? <Loading type="products" key={uuid} /> : filteredProducts.map(product => <Product key={product.id} product={product} />)}
+            {loading ? <Loading type="products" /> : filteredProducts.map(product => <Product key={product.id} product={product} />)}
         </div>
     </div>
   )

@@ -19,11 +19,11 @@ const ProductDetails = () => {
           } catch (err) {}
       }
       getSingleProduct();
-    }, [])
+    }, [id])
     
   return (
     <div className='productDetails'>
-      {loading ? <Loading type="productDetails"/> : <SingleProductDetails product={product}/> }
+      {loading ?  <Loading type="productDetails"/> : <SingleProductDetails product={product}/> }
     </div>
   )
 }
