@@ -10,6 +10,9 @@ const Contact = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        console.log(fullName)
+        console.log(email)
+        console.log(message)
     }
 
 

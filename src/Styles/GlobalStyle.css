@@ -1419,6 +1419,7 @@
 .contact .contactLeft .leftSocialsContainer .icon {
   margin-right: 10px;
   cursor: pointer;
+  z-index: 22;
   color: #313131;
 }
 
