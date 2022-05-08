@@ -1,7 +1,7 @@
 .singleProductDetails{
     width: 100%;
     min-height: calc(100vh - 70px);
-    background-color: pink;
+    background-color: lighten($pink, 20%);
     @include flexCenter();
     .singleProductDetailsLeft{
         width: 50%;
@@ -26,21 +26,20 @@
         @include flexColumn();
         align-items: flex-start;
         padding: 20px;
+        color: white;
         .singleProductTitle{
             margin-bottom: 20px;
             font-size: 2.5rem;
-            color: $grey;
         }
         .singleProductDesc{
             margin-bottom: 20px;
             font-size: 1.2rem;
-            color: grey;
+            font-weight: lighter;
         }
         .singleProductPrice{
             font-weight: bold;
             font-size: 2rem;
             margin-bottom: 20px;
-            color: $grey;
         }
         .ButtonsContainer{
             @include flexStart();

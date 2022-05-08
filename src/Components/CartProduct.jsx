@@ -21,7 +21,7 @@ const CartProduct = ({ product }) => {
 
             <div className="cartProductRight">
                 <h2 className="cartProductTitle">{title}</h2>
-                <span className="cartProductPrice">Total Price: $ {price * quantity}</span>
+                <span className="cartProductPrice">Total Price: $ {(price * quantity).toFixed(2)}</span>
                 <div className='quantityButton'>
                     <button className="quantityBtn" onClick={() => dispatch(decreaseQuantity({productId: id, product}))} style={{ color: "white" }} >-</button>
                     <span className='quantityAmount' style={{ color: "white", border: "1px solid white" }}>{quantity}</span>

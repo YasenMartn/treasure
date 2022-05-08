@@ -13,6 +13,15 @@ const Loading = ({type}) => {
     )
   }
 
+  const HomeSkeleton = () => {
+    return(
+      <div className='homeLoading'>
+        <div className="homeLoadingImage"></div>
+        <div className="homeLoadingTitle"></div>
+      </div>
+    )
+  }
+
   const ProductDetailsSkeleton = () => {
     return(
       <div className='detailsLoading'>
@@ -31,7 +40,9 @@ const Loading = ({type}) => {
   }
 
   if (type === "products") return [...Array(20)].map((x, i) => <ProductsSkeleton key={i} /> ) ;
+  if (type === "homeProducts") return <HomeSkeleton />  ;
   if (type === "productDetails") return <ProductDetailsSkeleton />;
+
 
 }
 

@@ -1,8 +1,19 @@
 import { Facebook, Instagram, Twitter, YouTube } from '@mui/icons-material'
-import React from 'react'
+import React, {useState} from 'react'
 import Circle from '../Components/Circle'
 
 const Contact = () => {
+
+    const [fullName, setFullName] = useState("")
+    const [email, setEmail] = useState("")
+    const [message, setMessage] = useState("")
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+    }
+
+
+
   return (
     <div className='contact'>
         <div className="contactLeft">
@@ -18,17 +29,17 @@ const Contact = () => {
             </div>
         </div>
         <div className="contactRight">
-            <form action="">
-                <input type="text" placeholder='Full Name' />
-                <input type="text" placeholder='Email' />
-                <textarea cols="30" rows="10" placeholder='What can we help you with ?' ></textarea>
+            <form onSubmit={handleSubmit}>
+                <input type="text" placeholder='Full Name' onChange={(e)=>setFullName(e.target.value)}  />
+                <input type="text" placeholder='Email' onChange={(e)=>setEmail(e.target.value)} />
+                <textarea cols="30" rows="10" placeholder='What can we help you with ?' onChange={(e)=>setMessage(e.target.value)}  ></textarea>
                 <button className="primaryBtn">Submit</button>
             </form>
         </div>
 
         <Circle right="-250px" top="-250px" bgColor="green"/>
         <Circle left="-250px" bottom="-300px" bgColor="red"/>
-        <Circle left="-250px" top="-250px" bgColor="hotpink"/>
+        <Circle left="-250px" top="-250px" bgColor="yellow"/>
         <Circle right="-250px" bottom="-300px" bgColor="blue"/>
     </div>
   )

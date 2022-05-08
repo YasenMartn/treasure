@@ -236,7 +236,7 @@
 
 .home {
   width: 100%;
-  height: calc(100vh - 70px);
+  min-height: calc(100vh - 70px);
   background-color: #e788b7;
   overflow: hidden;
   display: -webkit-box;
@@ -254,22 +254,140 @@
           flex-direction: column;
   position: relative;
   color: white;
-  padding: 0 20px;
+  padding: 20px;
 }
 
 .home .homeTitle {
   text-transform: uppercase;
   font-size: 5rem;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   text-align: center;
+  z-index: 22;
 }
 
 .home .homeMiniTitle {
   text-transform: uppercase;
   font-size: 3rem;
   font-weight: lighter;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   text-align: center;
+}
+
+.home .productsContainer {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.home .productsContainer .swiper-slide {
+  width: 200px;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.home .productsContainer .swiper-slide .imageContainer {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  background-color: white;
+  overflow: hidden;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.home .productsContainer .swiper-slide .imageContainer .contentContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.home .productsContainer .swiper-slide .imageContainer .contentContainer .homeIconContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px;
+  background-color: #d63384;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 20px;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.home .productsContainer .swiper-slide .imageContainer .contentContainer .homeIconContainer:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  background-color: #0d6efd;
+}
+
+.home .productsContainer .swiper-slide .imageContainer:hover .contentContainer {
+  background-color: rgba(0, 0, 0, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.home .productsContainer .swiper-slide .imageContainer .productImage {
+  width: 70%;
+  height: 70%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.home .productsContainer .swiper-slide .title {
+  color: #313131;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1.2rem;
 }
 
 @media (max-width: 800px) {
@@ -615,6 +733,46 @@
   border-radius: 15px;
 }
 
+.homeLoading {
+  width: 200px;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.homeLoading .homeLoadingImage {
+  background-color: #313131;
+  -webkit-animation: skeleton 1s ease-in-out infinite alternate;
+          animation: skeleton 1s ease-in-out infinite alternate;
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+}
+
+.homeLoading .homeLoadingTitle {
+  background-color: #313131;
+  -webkit-animation: skeleton 1s ease-in-out infinite alternate;
+          animation: skeleton 1s ease-in-out infinite alternate;
+  margin-top: 20px;
+  width: 100%;
+  height: 20px;
+  border-radius: 10px;
+}
+
 @-webkit-keyframes skeleton {
   to {
     opacity: .5;
@@ -662,13 +820,13 @@
 .productDetails {
   width: 100%;
   height: calc(100vh - 70px);
-  background: pink;
+  background-color: #e788b7;
 }
 
 .singleProductDetails {
   width: 100%;
   min-height: calc(100vh - 70px);
-  background-color: pink;
+  background-color: #e788b7;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -737,25 +895,24 @@
       -ms-flex-align: start;
           align-items: flex-start;
   padding: 20px;
+  color: white;
 }
 
 .singleProductDetails .singleProductDetailsRight .singleProductTitle {
   margin-bottom: 20px;
   font-size: 2.5rem;
-  color: #313131;
 }
 
 .singleProductDetails .singleProductDetailsRight .singleProductDesc {
   margin-bottom: 20px;
   font-size: 1.2rem;
-  color: grey;
+  font-weight: lighter;
 }
 
 .singleProductDetails .singleProductDetailsRight .singleProductPrice {
   font-weight: bold;
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #313131;
 }
 
 .singleProductDetails .singleProductDetailsRight .ButtonsContainer {
@@ -1043,7 +1200,7 @@
   width: 100%;
   min-height: 200px;
   border-radius: 15px;
-  background: white;
+  background: #408cfd;
   margin-bottom: 20px;
   position: relative;
   overflow: hidden;
@@ -1070,6 +1227,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-color: #fff;
 }
 
 .cartProduct .cartProductLeft .cartProductImage {

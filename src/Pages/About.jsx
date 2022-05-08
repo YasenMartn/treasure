@@ -10,7 +10,7 @@ const About = () => {
         For more info, head to the contact section or click the following link.
         
         </p>
-        <Circle right="-250px" top="-250px" bgColor="hotpink"/>
+        <Circle right="-250px" top="-250px" bgColor="blue"/>
         <Circle left="-250px" bottom="-300px" bgColor="green"/>
     </div>
   )

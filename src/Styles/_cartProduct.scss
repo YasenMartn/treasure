@@ -2,7 +2,7 @@
     width: 100%;
     min-height: 200px;
     border-radius: 15px;
-    background: white;
+    background: lighten($blue, 10%);
     margin-bottom: 20px;
     position: relative;
     overflow: hidden;
@@ -11,6 +11,7 @@
         min-height: 200px;
         width: 20%;
         @include flexCenter();
+        background-color: #fff;
         .cartProductImage{
             width: 70%;
             height: 70%;
