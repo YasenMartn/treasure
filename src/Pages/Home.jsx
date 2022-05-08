@@ -5,6 +5,8 @@ import Loading from '../Components/Loading';
 import axios from 'axios';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper";
 import { AddShoppingCartOutlined, RemoveRedEyeOutlined } from '@mui/icons-material';
 import { addProduct } from '../redux/cartSlice';
@@ -38,12 +40,13 @@ const Home = () => {
       <Circle bgColor="lightblue" left="-250px" top="-250px" />
       <Circle bgColor="lightblue" right="-250px" bottom="-300px" />
 
-      <div className="productsContainer">
         <Swiper
           spaceBetween={50}
           slidesPerView={4}
           loop={true}
-          pagination={true}
+          pagination={{
+            clickable: true,
+          }}          
           navigation={true}
           breakpoints={{
             "0": {
@@ -80,7 +83,7 @@ const Home = () => {
             products.map(product =>
               <SwiperSlide key={product.id}>
                 <div className="imageContainer">
-                  <img className='productImage' src={product.image} alt="image" />
+                  <img className='productImage' src={product.image} alt={product.name} />
                   <div className="contentContainer">
 
                     <div className="homeIconContainer" 
@@ -100,7 +103,6 @@ const Home = () => {
               </SwiperSlide>)
           }
         </Swiper>
-      </div>
     </div>
   )
 }
